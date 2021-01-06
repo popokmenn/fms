@@ -19,13 +19,13 @@ public class ListenerFingerprintCapture implements FingerprintCaptureListener {
 
 	@Override
 	public void captureOK(byte[] arg0) {
-		logger.debug("Capture Success {}", arg0);
+//		logger.debug("Capture Success {}", arg0);
 
 	}
 
 	@Override
 	public void extractOK(byte[] arg0) {
-		logger.debug("Extract Success {}", arg0);
+//		logger.debug("Extract Success {}", arg0);
 		if (ZKContext.REGISTER_MODE) {
 			int[] fid = new int[1];
 			int[] score = new int[1];

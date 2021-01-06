@@ -13,6 +13,7 @@ public class ZKController {
 	public ResponseEntity<String> register() {
 		ZKContext.REGISTER_MODE = true;
 		ZKContext.IDENTIFY_MODE = false;
+		ZKContext.enroll_idx = 0;
 		return ResponseEntity.ok("Register Mode, Please Tap Finger!");
 	}
 	

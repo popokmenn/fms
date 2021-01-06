@@ -16,12 +16,16 @@ public class ZkService {
 	private final Logger logger = LoggerFactory.getLogger(this.getClass());
 	private WorkThread workThread = null;
 
-	
 	public ZkService() {
 		init();
 	}
 
 	public void init() {
+		try {
+			FreeSensor();
+		} catch (Exception e) {
+			
+		}
 		FingerprintCaptureListener fcl = new ListenerFingerprintCapture();
 		int ret = FingerprintSensorErrorCode.ZKFP_ERR_OK;
 		
